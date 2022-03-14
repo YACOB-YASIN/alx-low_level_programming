@@ -7,7 +7,6 @@
  * and if it is positive, negative, or zero
  * Return: 0 (Success)
  */
-
 int main(void)
 {
 	int n;
