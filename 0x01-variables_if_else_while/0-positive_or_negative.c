@@ -5,7 +5,7 @@
 * main - Entry point
 * Description: Get a random number and print the number
 * and if it is positive, negative, or zero
-* Return: (0) (Success)
+* Return: 0 (Success)
 */
 
 int main(void)
@@ -20,7 +20,7 @@ int main(void)
 	else if (n == 0)
 	     printf("%d is zero\n", n);
 	else 
-	     printf("%d is positive\n", n);
+	     printf("%d is negative\n", n);
 	  
 	return (0);
 }
