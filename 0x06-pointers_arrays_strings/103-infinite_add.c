@@ -1,66 +1,50 @@
-
 #include "main.h"
+#include <stdio.h>
 
 /**
- * infinite_add - add 2 integers.
- * @n1: integer
- * @n2: integer
- * @r: buffer
- * size_r: size of r
- * Return: char
+ * print_buffer - prints buffer
+ * @b: buffer
+ * @size: size
+ * Return: void
  */
 
-int _atoi(char *s)
+void print_buffer(char *b, int size)
 {
-	int sign = 1, resp = 0, firstNum;
+	int o, j, i;
 
-	for (firstNum = 0; !(s[firstNum] >= 48 && s[firstNum] <= 57); firstNum++)
+	o = 0;
+
+	if (size <= 0)
 	{
-		if (s[firstNum] == '-')
+		printf("\n");
+		return;
+	}
+	while (o < size)
+	{
+		j = size - o < 10 ? size - o : 10;
+		printf("%08x: ", o);
+		for (i = 0; i < 10; i++)
 		{
-			sign *= -1;
+			if (i < j)
+				printf("%02x", *(b + o + i));
+			else
+				printf("  ");
+			if (i % 2)
+			{
+				printf(" ");
+			}
 		}
+		for (i = 0; i < j; i++)
+		{
+			int c = *(b + o + i);
+
+			if (c < 32 || c > 132)
+			{
+				c = '.';
+			}
+			printf("%c", c);
+		}
+		printf("\n");
+		o += 10;
 	}
-
-	for (int i = firstNum; s[i] >= 48 && s[i] <= 57; i++)
-	{
-		resp *= 10;
-		resp += (s[i] - 48);
-	}
-
-	return (sign * resp);
-}
-
-void int_to_string(int n)
-{
-int divisor = 1, i, resp;
-
-
-for (i = 0; n / divisor > 9; i++)
-{
-	divisor *= 10;
-}
-
-char str[i];
-
-for (int cmpt = 0; divisor >= 10; divisor /= 10, cmpt++)
-{
-	resp = n / divisor;
-	str[cmpt] = '0' + resp;
-	n = n - resp * divisor;
-}
-str[i] = ('0' + n);
-
-}
-
-
-char *infinite_add(char *n1, char *n2, char *r, int size_r)
-{
-    int sum, a, b;
-    a = _atoi(n1);
-    b = _atoi(n2);
-
-    sum = a + b;
-
-
 }
