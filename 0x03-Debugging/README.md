@@ -1,4 +1,4 @@
-Descriptions of the tas
+Descriptions of the task.
 In Debugging project we need to answer the following questions
 
 
