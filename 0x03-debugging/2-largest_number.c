@@ -1,21 +1,4 @@
 
-abela12
-/
-alx-low_level_programming
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-alx-low_level_programming/0x03-debugging/2-largest_number.c
-@abela12
-abela12 0x03. C - Debugging Folder - Added
- 1 contributor
-33 lines (29 sloc)  397 Bytes
 #include "main.h"
 
 /**
